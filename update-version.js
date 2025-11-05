@@ -1,0 +1,14 @@
+const fs = require('fs');
+const path = require('path');
+const packageJson = require('./package.json');
+const currentVersion = packageJson.version;
+const versionParts = currentVersion.split('.');
+let patch = parseInt(versionParts[2]);
+patch++;
+const newVersion = `${versionParts[0]}.${versionParts[1]}.${patch}`;
+packageJson.version = newVersion;
+const versionFilePath = path.join(__dirname, 'src/environments/version.ts');
+const content = `export const version = '${newVersion}';\n`;
+fs.writeFileSync(versionFilePath, content, 'utf8');
+fs.writeFileSync('./package.json', JSON.stringify(packageJson, null, 2), 'utf8');
+console.log(`Version updated to: ${newVersion}`);

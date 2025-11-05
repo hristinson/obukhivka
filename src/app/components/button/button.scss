@@ -1,0 +1,36 @@
+.button_wrapper {
+  padding: 10px 10px;
+  margin-right: 16px;
+  font-size: 16px;
+  background: linear-gradient(
+    to bottom,
+    var(--start-gradient-color) 0%,
+    var(--middle-gradient-color) 50%,
+    var(--start-gradient-color) 100%
+  );
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    color: white;
+    background: linear-gradient(
+      to bottom,
+      var(--end-gradient-color) 0%,
+      var(--start-gradient-color) 50%,
+      var(--end-gradient-color) 100%
+    );
+    transform: scale(1.1);
+  }
+
+  &:active {
+    background-color: #388e3c;
+    transform: scale(1);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

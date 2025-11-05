@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Roboto';
+}
+.root {
+  display: flex;
+  height: 100%;
+}
+
+:root {
+  --primary-color: #3719dd;
+  --secondary-color: #21ecec;
+  --accent-color: #ff5722;
+  --background-color: #f1f1f1;
+  --primary-text-color: #000000;
+  --primary-hover-text-color: #ffffff;
+  --secondary-text-color: #505327;
+  --start-gradient-color: #123456;
+  --middle-gradient-color: #ffffff;
+  --end-gradient-color: #ffffff;
+}
