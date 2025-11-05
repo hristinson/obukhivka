@@ -1,0 +1,10 @@
+<div class="marquee">
+  <div class="marquee-content">
+    <div *ngFor="let id of pokemonIds">
+      <img [src]="getPokemonImageUrl(id)" [alt]="'Shiny Pokemon ' + id" class="pokemon-image" />
+    </div>
+    <div *ngFor="let id of pokemonIds">
+      <img [src]="getPokemonImageUrl(id)" [alt]="'Shiny Pokemon ' + id" class="pokemon-image" />
+    </div>
+  </div>
+</div>

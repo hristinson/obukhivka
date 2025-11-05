@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
+import { Advertising } from '../advertising/advertising';
 
 @Component({
   selector: 'app-content',
-  imports: [],
+  imports: [Advertising],
   templateUrl: './content.html',
   styleUrl: './content.scss',
 })
-export class Content {
-
-}
+export class Content {}

@@ -1,0 +1,25 @@
+.marquee {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.marquee-content {
+  display: flex;
+  animation: marqueeAnimation 500s linear infinite;
+}
+
+.pokemon-image {
+  width: 100px;
+  height: 100px;
+  margin-right: 15px;
+}
+
+@keyframes marqueeAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
