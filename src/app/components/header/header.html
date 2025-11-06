@@ -1,4 +1,5 @@
 <div class="header_wrapper">
   <div class="logo_wrapper">Make Obukhivka Great Again</div>
-  <app-button [text]="'Login'"></app-button>
+  <div>{{ cartCount }}</div>
+  <app-button [text]="'Login'" (click)="openModal()"></app-button>
 </div>
