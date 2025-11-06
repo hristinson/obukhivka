@@ -12,6 +12,6 @@ export class NetlifyApiService {
   constructor(private http: HttpClient) {}
 
   getTestResult(): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}test`);
+    return this.http.get<any>(`${this.apiUrl}getproducts`);
   }
 }

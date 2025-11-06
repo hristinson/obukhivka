@@ -1,4 +1,19 @@
 <div class="content_wrapper">
   <app-advertising></app-advertising>
-  {{ result }}
+
+  <div *ngIf="result && result.length > 0; else noProducts">
+    <h3>Продукти:</h3>
+    <div class="product-list">
+      <div *ngFor="let product of result" class="product-card">
+        <h4>{{ product.serialNumber }}</h4>
+        <p>{{ product.specification }}</p>
+        <p>{{ product.title }}</p>
+        <p>{{ product.date }}</p>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #noProducts>
+    <p>Продукти не знайдені.</p>
+  </ng-template>
 </div>
